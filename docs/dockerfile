@@ -90,7 +90,8 @@ RUN pip3 install --no-cache-dir PyYAML
 
 # 重新设置工作目录
 WORKDIR /app
-
+# 拷贝工具
+COPY AgentFlow/tools /app/
 # 创建简化的环境设置脚本
 RUN echo '#!/bin/bash' > /usr/local/bin/setup-env.sh && \
     echo '# 设置开发环境变量' >> /usr/local/bin/setup-env.sh && \
